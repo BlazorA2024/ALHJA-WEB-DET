@@ -1,0 +1,88 @@
+﻿@* 
+<section class="pt-6 border-gray-100 md:col-span-8 lg:col-span-9 xl:col-span-9 md:px-4 py-4">
+    <div class="mb-6">
+        <div class="flex justify-between">
+            <h3 class="flex flex-row items-center text-xl font-bold">
+                Access Tokens
+            </h3>
+        </div>
+    </div>
+    <div class="mb-8">
+        <div class="mb-6 flex items-center justify-between">
+            <h3 class="text-lg font-semibold">User Access Tokens</h3>
+            <form method="get" action="/settings/tokens/new">
+                <button type="submit" class="btn-1" disabled="">
+                    <span class="pr-1 font-bold">+</span>
+                    Create new token
+                </button>
+            </form>
+        </div>
+        <p class="mb-6 text-gray-500 xl:pr-24 2xl:pr-44">
+            Access tokens authenticate your identity to the Hugging Face Hub and allow applications to perform actions based
+            on token permissions. <span class="font-semibold">
+                <svg width="1em" height="1em" class="inline align-sub -translate-y-px" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" preserveAspectRatio="xMidYMid meet"><path d="M7.6936 0.869202C4.32485 0.869202 1.5686 3.62545 1.5686 6.9942C1.5686 10.363 4.32485 13.1192 7.6936 13.1192C11.0624 13.1192 13.8186 10.363 13.8186 6.9942C13.8186 3.62545 11.0624 0.869202 7.6936 0.869202ZM7.21235 3.4942H8.17485V8.3067H7.21235V3.4942ZM7.6936 10.9317C7.3436 10.9317 7.03735 10.6255 7.03735 10.2755C7.03735 9.92545 7.3436 9.6192 7.6936 9.6192C8.0436 9.6192 8.34985 9.92545 8.34985 10.2755C8.34985 10.6255 8.0436 10.9317 7.6936 10.9317Z" fill="currentColor"></path></svg> Do not share your
+                <span class="font-bold">Access Tokens</span> with anyone
+            </span>; we regularly check for leaked Access Tokens and remove them immediately.
+        </p>
+        <div class="SVELTE_HYDRATER contents" data-target="UserSettingsTokens" data-props="{&quot;userName&quot;:&quot;735408478mm&quot;,&quot;tokens&quot;:[]}"><div class="flex w-full flex-col items-center justify-center rounded-xl border border-gray-100 bg-gray-50 py-8 text-smd text-gray-600 dark:bg-gray-925">You have no Access Token</div></div>
+        <p class="mt-1 text-sm text-gray-500">
+            Please confirm your account email address before creating access tokens
+        </p>
+    </div>
+</section> *@
+@using Microsoft.AspNetCore.Components
+
+<section class="pt-6 border-gray-100 md:col-span-8 lg:col-span-9 xl:col-span-9 md:px-4 py-4">
+    <div class="mb-6">
+        <div class="flex justify-between">
+            <h3 class="text-xl font-bold">Access Tokens</h3>
+        </div>
+    </div>
+
+    <div class="mb-8">
+        <div class="flex items-center justify-between mb-6">
+            <h3 class="text-lg font-semibold">User Access Tokens</h3>
+            <form method="get" action="/settings/tokens/new">
+                <button type="submit" class="btn-1" disabled="">
+                    <span class="pr-1 font-bold">+</span>
+                    Create new token
+                </button>
+            </form>
+        </div>
+
+        <p class="mb-6 text-gray-500 xl:pr-24 2xl:pr-44">
+            Access tokens authenticate your identity to the Hugging Face Hub and allow applications to perform actions based
+            on token permissions. <span class="font-semibold">
+                <svg width="1em" height="1em" class="inline align-sub -translate-y-px" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
+                    <path d="M7.6936 0.869202C4.32485 0.869202 1.5686 3.62545 1.5686 6.9942C1.5686 10.363 4.32485 13.1192 7.6936 13.1192C11.0624 13.1192 13.8186 10.363 13.8186 6.9942C13.8186 3.62545 11.0624 0.869202 7.6936 0.869202ZM7.21235 3.4942H8.17485V8.3067H7.21235V3.4942ZM7.6936 10.9317C7.3436 10.9317 7.03735 10.6255 7.03735 10.2755C7.03735 9.92545 7.3436 9.6192 7.6936 9.6192C8.0436 9.6192 8.34985 9.92545 8.34985 10.2755C8.34985 10.6255 8.0436 10.9317 7.6936 10.9317Z" fill="currentColor"></path>
+                </svg> Do not share your
+                <span class="font-bold">Access Tokens</span> with anyone
+            </span>; we regularly check for leaked Access Tokens and remove them immediately.
+        </p>
+
+        @if (Tokens.Any())
+        {
+            <ul>
+                @foreach (var token in Tokens)
+                {
+                    <li>@token</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <div class="flex w-full flex-col items-center justify-center rounded-xl border border-gray-100 bg-gray-50 py-8 text-smd text-gray-600 dark:bg-gray-925">
+                You have no Access Token
+            </div>
+            <p class="mt-1 text-sm text-gray-500">
+                Please confirm your account email address before creating access tokens.
+            </p>
+        }
+    </div>
+</section>
+
+@code {
+    private List<string> Tokens = new List<string>(); // Replace with your actual data source.
+
+    
+}

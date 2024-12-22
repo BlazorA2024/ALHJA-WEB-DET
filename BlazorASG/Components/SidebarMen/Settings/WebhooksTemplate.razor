@@ -1,0 +1,59 @@
+﻿@* @page "/settings/webhooks"
+ *@
+<section class="pt-6 border-gray-100 md:col-span-8 lg:col-span-9 xl:col-span-9 md:px-4 py-4">
+	<div class="mb-6">
+		<div class="flex justify-between">
+			<h3 class="flex flex-row items-center text-xl font-bold">
+				Webhooks
+			</h3>
+			<span slot="header" class="ml-3 grow self-end text-gray-400"></span>
+		</div>
+	</div>
+	<div class="mt-6 flex flex-col gap-y-8">
+		<div>
+			<p class="mb-1 text-gray-500">
+				Use Webhooks to subscribe to repo updates and/or discussion events on any model, dataset or Space (not just
+				the ones you own).
+			</p>
+			<p>
+				<span class="italic text-gray-400">For example you can auto-convert models, build community bots, or CI/CD for your datasets or Spaces.</span>
+				<a class="text-gray-400 underline" href="/docs/hub/webhooks">Read the documentation</a>
+			</p>
+		</div>
+
+
+
+		<a class="btn-1 mt-2 w-fit" href="settings/webhooks/new">Add a new webhook</a>
+	</div>
+</section>
+<style>
+	.mb-4 {
+		margin-bottom: 1rem;
+	}
+
+	.btn-1 {
+		--tw-border-opacity: 1;
+		border-color: rgb(229 231 235 / var(--tw-border-opacity));
+		--tw-gradient-from: #fff var(--tw-gradient-from-position);
+		--tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+		--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+		--tw-gradient-to: #f3f4f6 var(--tw-gradient-to-position);
+		--tw-text-opacity: 1;
+		color: rgb(31 41 55 / var(--tw-text-opacity));
+	}
+
+	.btn-1, .btn-widget, .btn-warning {
+		display: inline-flex;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		user-select: none;
+		align-items: center;
+		justify-content: center;
+		white-space: nowrap;
+		border-radius: .5rem;
+		border-width: 1px;
+		background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+		padding: .25rem .75rem;
+	}
+</style>

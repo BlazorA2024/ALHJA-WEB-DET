@@ -1,0 +1,84 @@
+﻿ @page "/settings/billing/subscription"
+<main class="flex flex-1 flex-col">
+	<ResendConfirmationemail />
+
+	<div class="container relative max-w-full flex-1 from-pink-100 via-green-100 to-yellow-100 md:bg-gradient-to-br md:pb-12 md:pt-8 md:dark:from-gray-900 md:dark:to-gray-925">
+		<section class="col-span-full mx-auto max-w-2xl flex-1 overflow-hidden bg-white md:rounded-xl md:shadow">
+			<div class="flex h-40 items-center justify-center bg-gradient-to-t from-gray-100 via-white to-white dark:from-gray-925 dark:to-gray-800">
+				<h1 class="mr-3 text-xl font-bold text-gray-800 sm:text-2xl md:-mt-3">
+					<span class="mr-3">👷</span>Subscribe to Pro
+				</h1>
+			</div>
+
+			<ul class="space-y-1.5 bg-white px-2 pb-6 pt-6 text-gray-700 dark:text-gray-300 sm:px-4 md:-mt-4">
+				<li class="flex items-start text-smd md:text-lg">
+					<svg class="flex-none mt-1 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" fill="currentColor"></path></svg>
+					<p><span class="font-semibold">Repositories</span>: Upload unlimited public repositories</p>
+				</li>
+				<li class="flex items-start text-smd md:text-lg">
+					<svg class="flex-none mt-1 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" fill="currentColor"></path></svg>
+					<p>
+						<span class="font-semibold">Spaces ZeroGPU</span>: Get 5x more usage quota and the highest priority in GPU
+						queues
+					</p>
+				</li>
+				<li class="flex items-start text-smd md:text-lg">
+					<svg class="flex-none mt-1 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" fill="currentColor"></path></svg>
+					<p>
+						<span class="font-semibold">Spaces Hosting</span>: Create ZeroGPU Spaces using distributed A100 hardware
+					</p>
+				</li>
+				<li class="flex items-start text-smd md:text-lg">
+					<svg class="flex-none mt-1 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" fill="currentColor"></path></svg>
+					<p>
+						<span class="font-semibold">Spaces Dev Mode</span>: Faster iteration cycles with SSH/VS Code support for
+						Spaces
+					</p>
+				</li>
+				<li class="flex items-start text-smd md:text-lg">
+					<svg class="flex-none mt-1 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" fill="currentColor"></path></svg>
+					<p>
+						<span class="font-semibold">Serverless Inference API</span>: Get 20x higher daily rate limits on Inference
+						API
+					</p>
+				</li>
+				<li class="flex items-start text-smd md:text-lg">
+					<svg class="flex-none mt-1 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" fill="currentColor"></path></svg>
+					<p><span class="font-semibold">Dataset Viewer</span>: Activate it on private datasets</p>
+				</li>
+				<li class="flex items-start text-smd md:text-lg">
+					<svg class="flex-none mt-1 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" fill="currentColor"></path></svg>
+					<p><span class="font-semibold">Blog Articles</span>: Publish articles to the Hugging Face blog</p>
+				</li>
+				<li class="flex items-start text-smd md:text-lg">
+					<svg class="flex-none mt-1 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" fill="currentColor"></path></svg>
+					<p><span class="font-semibold">Social Posts</span>: Share short updates with the community</p>
+				</li>
+				<li class="flex items-start text-smd md:text-lg">
+					<svg class="flex-none mt-1 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" fill="currentColor"></path></svg>
+					<p><span class="font-semibold">Features Preview</span>: Get exclusive early access to upcoming features</p>
+				</li>
+				<li class="flex items-start text-smd md:text-lg">
+					<svg class="flex-none mt-1 mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" fill="currentColor"></path></svg>
+					<p>
+						<span class="inline-block -skew-x-12 border border-gray-200 bg-gradient-to-br from-pink-300 via-green-200 to-yellow-200 text-sm font-bold text-black shadow-lg shadow-green-500/10 dark:from-pink-500 dark:via-green-500 dark:to-yellow-500 dark:text-black dark:shadow-green-500/20 rounded-md px-1.5 py-0 !mr-1.5">
+							PRO
+						</span>
+						<span class="font-semibold">Badge</span>: Show your support on your profile
+					</p>
+				</li>
+			</ul>
+
+			<div class="SVELTE_HYDRATER contents" data-target="UserSubscriptionForm" data-props="{&quot;isUserAuth&quot;:true,&quot;next&quot;:null,&quot;theme&quot;:&quot;light&quot;}">
+				<div>
+					<div class="alert alert-error whitespace-pre-wrap !rounded-t-none">Error: Your primary email must be confirmed to access paid features.</div> <div class="py-4">
+						<div class="flex h-40 w-full items-center justify-center">
+							<svg class="animate-spin mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" fill="none" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+							Initializing Payment...
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</main>
