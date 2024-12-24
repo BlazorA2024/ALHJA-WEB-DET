@@ -213,3 +213,42 @@
         </section>
     </div>
 </main> *@
+@page "/Feature"
+<ResendConfirmationemail />
+
+@* مكون شريط التمرير *@
+@* <div class="block padded" style="border-style: solid; overflow: visible; min-width: min(160px, 100%); border-width: 1px;">
+    <div class="wrap">
+        <div class="head">
+            <label for="sliderValue">
+                <span>Slider</span>
+            </label>
+            <input type="number" @bind="SliderValue" min="0" max="1" step="0.1" class="number-input" aria-label="number input for Slider" />
+        </div>
+    </div>
+    <input type="range" id="sliderValue" @bind="SliderValue" min="0" max="1" step="0.1" class="range-slider" aria-label="range slider for Slider" />
+</div>                                                 <MudSlider @bind-Value="SliderValue" Min="0" Max="1" Step="0.1" Variant="Variant.Filled" Class="svelte-pc1gm4" Style="background-size: 80% 100%;"></MudSlider>
+*@
+@* <MudSlider @bind-Value="value1" Min="20" Max="80" Color="Color.Info">Value: @value1.ToString()</MudSlider>
+
+
+@code {
+    public double value1 = 50;
+    public double value2 = -0.75;
+}
+@code {
+    private double SliderValue { get; set; } = 0.5; // القيمة الافتراضية
+} *@
+
+<main style="
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+            margin-top: 6%;
+        ">
+   <SliderComponent />
+
+</main>
